@@ -8,7 +8,35 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <style>
+    <style>* {
+        scroll-behavior: smooth;
+      }
+      /* Custom CSS styles */
+      video {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .img {
+        background-size: cover;
+        width: 850px;
+        border-radius: 50px;
+      }
+      .navbar {
+        background-color: #fff !important;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+        margin-top: 20px;
+      }
+      .navbar-nav .nav-link {
+        color: #222 !important; /* Change this color to your desired color */
+      }
+      .navbar-nav .nav-link:hover {
+        color: #799f0c !important; /* Change this color to your desired hover color */
+      }
+      .book {
+        background-color: green;
+        color: #fff;
+        margin-left: 20px;
+      }
       .container {
         margin-top: 50px;
       }
@@ -19,6 +47,111 @@
     </style>
   </head>
   <body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./imgs/logo.jpg"
+            alt=""
+            style="width: 50px; border-radius: 20px"
+        /></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#video">Video</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://g.co/kgs/AYyU3gC"
+                target="_blank"
+                >reviews</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://g.co/kgs/AYyU3gC"
+                target="_blank"
+                >contact</a
+              >
+            </li>
+            <a href="#appointment">
+              <button class="btn btn-primary book">Book Appointment</button>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="mb-4">About Me</h2>
+            <p>Your introduction and details about yourself go here.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              convallis libero ac odio scelerisque, et tristique arcu semper.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <!-- Profile image -->
+            <img
+              src="./imgs/wood.jpg"
+              alt="Profile Image"
+              class="img-fluid img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="mb-4">Watch Our Video</h2>
+            <!-- Embed video from YouTube or other platform 
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/your-video-id"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>-->
+            <video
+              autoplay
+              muted
+              controls
+              width="560"
+              height="315"
+              style="border-radius: 20px"
+            >
+              <source
+                src="./viedo/MbgUQzhyT9V9Bqebv-Nrc-1000030997.webm"
+                type="video/webm"
+              />
+              <source
+                src="./viedo/MbgUQzhyT9V9Bqebv-Nrc-1000030997.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="container">
       <h2 class="text-center">Book an Appointment</h2>
       <form id="bookingForm">
@@ -48,6 +181,18 @@
         </div>
         <button type="submit" class="btn btn-primary">Book Appointment</button>
       </form>
+ <div class="col-lg-6">
+            <!-- Contact details -->
+            <h4>Contact Details:</h4>
+            <p>Email: contact@yourcompany.com</p>
+            <p>Phone: +1234567890</p>
+            <p>Address: 123 Street, City, Country</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
       <button
         id="paymentBtn"
         class="btn btn-success mt-3"

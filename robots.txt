@@ -1,1 +1,5 @@
 
+User-agent: *
+Allow: /
+
+Sitemap: https://kovendan16.github.io/woodclinictest/sitemap.xml
